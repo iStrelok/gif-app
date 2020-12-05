@@ -13,12 +13,9 @@ const AddCategory = ({ setCategories }) => {
         e.preventDefault()
 
         if ( inputValue.trim().length > 2 ) {
-            setCategories( categories => [...categories, inputValue] )
+            setCategories( categories => [ inputValue, ...categories ] )
             setInputValue( '' )
-        } 
-
-
-
+        }
     }
 
     return (
@@ -27,6 +24,8 @@ const AddCategory = ({ setCategories }) => {
                 type="text"
                 value={ inputValue }
                 onChange={ handleInputChange }
+                className="form-control"
+                placeholder="Busque los gifs que desee"
             />
         </form>
     );

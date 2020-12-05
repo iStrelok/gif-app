@@ -8,13 +8,13 @@ const GifExpertApp = () => {
 
     return (
         <div>
-            <h2>GifExpertApp</h2>
+            <h1 className="text-center">GifApp</h1>
             <AddCategory setCategories={ setCategories } />
             <ol>
                 {
                     categories.map( category => (
                         <GifGrid 
-                            key={ category } 
+                            key={ category }
                             category={ category }    
                         />
                     ))
